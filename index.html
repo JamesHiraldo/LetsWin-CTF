@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>LetsWin CTF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell" id="shell" hidden>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">LW</span><div><strong>LetsWin CTF</strong><small>LOCAL CHALLENGE DESK</small></div></div>
+      <div class="side-heading">WORKSPACE</div>
+      <button class="nav active" data-nav="home"><span>⌂</span> Overview</button>
+      <button class="nav" data-nav="workspace" data-desk="workspace"><span>▣</span> Saved challenges</button>
+      <button class="nav" data-nav="guides" data-desk="guides"><span>☷</span> Challenge guides</button>
+      <button class="nav" data-nav="favorites" data-desk="favorites"><span>☆</span> Favorites</button>
+      <button class="nav" data-nav="osint"><span>◎</span> OSINT</button>
+      <button class="nav" data-nav="crypto"><span>⌘</span> Crypto & passwords</button>
+      <button class="nav" data-nav="forensics"><span>▧</span> Forensics & logs</button>
+      <button class="nav" data-nav="web"><span>◇</span> Web security</button>
+      <button class="nav" data-nav="network"><span>◈</span> Network analysis</button>
+      <button class="nav" data-nav="catalog"><span>▤</span> All linked tools</button>
+      <div class="sidebar-bottom">
+        <div class="local-pill"><span class="live-dot"></span> Local tools · no platform connection</div>
+        <button id="changeMode" class="mode-button">Change game mode</button>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="eyebrow">YOUR CTF WORKSPACE</div><div class="top-right"><span id="modeBadge" class="badge"></span><span class="avatar">LW</span></div></header>
+      <div id="content" class="content"></div>
+      <footer>LetsWin CTF · Made by Maydayx2 · Analyze local material and open third-party tool documentation from one place.</footer>
+    </main>
+  </div>
+
+  <div id="modeGate" class="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate-card">
+      <div class="gate-logo">LW</div>
+      <div class="eyebrow">SET UP YOUR SESSION</div>
+      <h1 id="gateTitle">Choose your game mode</h1>
+      <p>Choose before opening any tool. Switching clears temporary results and team notes. Saved challenges, recipes, and favorites stay separate for each mode.</p>
+      <div class="mode-options">
+        <button class="mode-choice" data-mode="individual">
+          <span class="choice-icon">Ⅰ</span><span class="choice-text"><strong>Individual Game</strong><small>Solo workspace. AI assistance and team notes are unavailable.</small></span><span class="arrow">→</span>
+        </button>
+        <button class="mode-choice" data-mode="team">
+          <span class="choice-icon">Ⅱ</span><span class="choice-text"><strong>Team Game</strong><small>Team notes available. AI may be used within the limits in your rules.</small></span><span class="arrow">→</span>
+        </button>
+      </div>
+      <div class="gate-note">The app does not connect to the competition platform or submit answers. Use external tools only on authorized targets.</div>
+    </div>
+  </div>
+
+  <script src="vendor/crypto-js.js"></script>
+  <script src="vendor/jsQR.js"></script>
+  <script src="core.js"></script>
+  <script src="traffic.js"></script>
+  <script src="viewer.js"></script>
+  <script src="catalog.js"></script>
+  <script src="workspace.js"></script>
+  <script src="crypto-tools.js"></script>
+  <script src="analytics.js"></script>
+  <script src="image-tools.js"></script>
+  <script src="guides.js"></script>
+  <script src="code-identifier.js"></script>
+  <script src="desk.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

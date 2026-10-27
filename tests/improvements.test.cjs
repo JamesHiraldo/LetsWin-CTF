@@ -1,0 +1,57 @@
+const assert=require('node:assert/strict'),crypto=require('node:crypto');
+const W=require('../workspace'),X=require('../crypto-tools'),A=require('../analytics'),I=require('../image-tools'),T=require('../traffic');
+const QR=require('qrcode'),jsQR=require('../vendor/jsQR');
+let checks=0;function check(fn){fn();checks++;}
+const enc=new TextEncoder();
+for(const text of ['', 'abc', 'password', '你好😀', 'a'.repeat(1000)])for(const alg of ['MD5','SHA1','SHA256'])check(()=>assert.equal(X.hash(text,alg),crypto.createHash(alg.toLowerCase()).update(text).digest('hex')));
+for(const [text,digest] of [['','31d6cfe0d16ae931b73c59d7e0c089c0'],['password','8846f7eaee8fb117ad06bdd830b7586c'],['Password','a4f49c406510bdcab6824ee7c30fd852']])check(()=>assert.equal(X.hash(text,'NTLM'),digest));
+for(const [text,digest] of [['','31d6cfe0d16ae931b73c59d7e0c089c0'],['a','bde52cb31de33e46245e05fbdbd6fb24'],['abc','a448017aaf21d8525fc10ae87aa6729d'],['message digest','d9130a8164549fe818874806e1c7014b'],['abcdefghijklmnopqrstuvwxyz','d79e1c308aa5bbcdeea8ed63df412da9'],['1234567890'.repeat(8),'e33b4ddc9c38f2199c3e7b164fcc0536']])check(()=>assert.equal(X.md4(enc.encode(text)),digest));
+check(()=>assert.equal(X.cipher('ATTACK AT DAWN','vigenere','encode','LEMON'),'LXFOPV EF RNHR'));
+check(()=>assert.equal(X.cipher('Khoor, Zruog!','caesar','decode','3'),'Hello, World!'));
+for(const [kind,key,text] of [['caesar','-27','Hello, World!'],['vigenere','KEY','Hello World'],['xor','🔑','héllo 😀'],['binary','','你好'],['morse','','SOS 123']])check(()=>assert.equal(X.cipher(X.cipher(text,kind,'encode',key),kind,'decode',key),text));
+for(const args of [['a','xor','decode','x'],['010','binary','decode',''],['...x','morse','decode',''],['abc','caesar','encode','x'],['abc','vigenere','decode','']])check(()=>assert.throws(()=>X.cipher(...args)));
+check(()=>assert.equal(X.hashHints('$argon2id$v=19$m=65536,t=3,p=1$abc$abc').salted,true));
+check(()=>assert.equal(X.hashHints('5d41402abc4b2a76b9719d911017c592:salt').salted,true));
+check(()=>assert.equal(X.recipe('ZmxhZ3tkZW1vfQ==',[{format:'base64',direction:'decode'}]).output,'flag{demo}'));
+check(()=>assert.throws(()=>X.recipe('',[])));
+const memory=new Map(),storage={getItem:k=>memory.get(k),setItem:(k,v)=>memory.set(k,v)},s=W.createStore(storage);
+check(()=>assert.throws(()=>s.add()));s.open('individual');const c=s.add();c.notes='solo';c.flag='flag{private}';s.result('test','result');s.save();const backup=s.export();s.open('team');check(()=>assert.equal(s.data.challenges.length,0));
+check(()=>assert.throws(()=>s.import(backup),/game mode/));s.add().notes='team';s.save();s.open('individual');check(()=>assert.equal(s.active().notes,'solo'));check(()=>assert.equal(s.active().results[0].text,'result'));
+const restored=W.createStore(storage);restored.open('individual');check(()=>assert.equal(restored.active().flag,'flag{private}'));
+check(()=>assert.throws(()=>s.import('{invalid')));check(()=>assert.equal(s.active().notes,'solo'));
+const unavailable=W.createStore({getItem(){throw Error();},setItem(){throw Error();}});unavailable.open('individual');unavailable.add();check(()=>assert.match(unavailable.warning,/unavailable/));check(()=>assert.ok(unavailable.export().includes('Untitled')));
+const invalid=JSON.parse(backup);invalid.challenges.push(invalid.challenges[0]);check(()=>assert.throws(()=>W.validate(invalid,'individual'),/duplicate/i));
+const rows=[{number:1,timestamp:'2026-10-26T10:00:00Z',source:'A',message:'x'},{number:2,timestamp:'2026-10-26T10:00:00Z',source:'A',message:'x'},{number:3,timestamp:'2026-10-26T11:00:00Z',source:'B',message:'y'},{number:4,timestamp:'Oct 26 10:00:00',source:'B',message:'z'}];
+check(()=>assert.equal(A.time('2026-10-26 10:00:00'),Date.parse('2026-10-26T10:00:00Z')));check(()=>assert.equal(A.time('2026-10-26T06:00:00-04:00'),A.time(rows[0].timestamp)));
+check(()=>assert.equal(A.analyze(rows,{duplicatesOnly:true}).rows.length,2));check(()=>assert.equal(A.analyze(rows,{from:'2026-10-26T10:30'}).rows.length,1));check(()=>assert.equal(A.analyze(rows).unknownTimes,1));check(()=>assert.throws(()=>A.analyze(rows,{from:'2026-10-27',to:'2026-10-26'})));check(()=>assert.match(A.displayTime(rows[0].timestamp,'America/New_York'),/06:00:00/));
+const packet=(seq,text,flags=0)=>({seq,payload:enc.encode(text),flags});
+check(()=>assert.equal(new TextDecoder().decode(T.reassemble([packet(103,'lo'),packet(100,'Hel')]).runs[0].bytes),'Hello'));
+check(()=>assert.equal(T.reassemble([packet(100,'Hello'),packet(103,'lo!')]).retransmissions,1));
+check(()=>assert.equal(new TextDecoder().decode(T.reassemble([packet(100,'Hello'),packet(103,'lo!')]).runs[0].bytes),'Hello!'));
+check(()=>assert.equal(T.reassemble([packet(100,'Hello'),packet(103,'XX')]).conflicts,2));
+check(()=>assert.equal(T.reassemble([packet(100,'Hi'),packet(105,'there')]).gaps,1));
+check(()=>assert.equal(new TextDecoder().decode(T.reassemble([packet(0xfffffffe,'ab'),packet(0,'cd')]).runs[0].bytes),'abcd'));
+check(()=>assert.equal(new TextDecoder().decode(T.reassemble([packet(99,'Hi',2),packet(102,'!')]).runs[0].bytes),'Hi!'));
+let messages=T.http(enc.encode('HTTP/1.1 200 OK\r\nContent-Length: 5\r\n\r\nhello'));check(()=>assert.equal(messages[0].complete,true));check(()=>assert.equal(new TextDecoder().decode(messages[0].body),'hello'));
+check(()=>assert.equal(T.http(enc.encode('HTTP/1.1 200 OK\r\nContent-Length: 6\r\n\r\nhello'))[0].complete,false));
+check(()=>assert.equal(T.http(enc.encode('HTTP/1.1 200 OK\r\nContent-Length: 2\r\nContent-Length: 3\r\n\r\nabc'))[0].complete,false));
+check(()=>assert.equal(new TextDecoder().decode(T.http(enc.encode('HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\n3\r\nabc\r\n2\r\nde\r\n0\r\n\r\n'))[0].body),'abcde'));
+check(()=>assert.equal(T.http(enc.encode('HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\n5\r\nab'))[0].complete,false));
+check(()=>assert.equal(T.http(enc.encode('HTTP/1.1 200 OK\r\n\r\nbody'))[0].complete,false));
+const dns=Buffer.from('123481800001000100000000076578616d706c6503636f6d0000010001c00c000100010000003c0004c0000201','hex');
+check(()=>assert.equal(T.dns(dns).questions[0].name,'example.com'));check(()=>assert.equal(T.dns(dns).answers[0].value,'192.0.2.1'));
+check(()=>assert.throws(()=>T.dns(Buffer.from('000000000001000000000000c00c00010001','hex')),/pointer/));
+for(let n=0;n<dns.length;n++)check(()=>assert.throws(()=>T.dns(dns.subarray(0,n))));
+const png=Buffer.from('89504e470d0a1a0a0000000d49484452000000010000000108060000001f15c4890000000049454e44ae426082616263','hex');
+check(()=>assert.equal(I.inspect(png).appendedBytes,3));check(()=>assert.equal(I.inspect(png).metadata.Width,1));
+check(()=>assert.equal(I.inspect(Buffer.from('ffd8ffd9616263','hex')).appendedBytes,3));
+check(()=>assert.throws(()=>I.inspect(png.subarray(0,20)),/Truncated/));
+check(()=>assert.deepEqual([...I.pixels(new Uint8ClampedArray([3,4,5,6]),'red',0)],[255,255,255,255]));
+check(()=>assert.deepEqual([...I.pixels(new Uint8ClampedArray([3,4,5,6]),'alpha',-1)],[6,6,6,255]));
+// A generated, independently encoded QR fixture tests the real bundled decoder.
+const qr=QR.create('flag{local_qr_works}',{errorCorrectionLevel:'M'}),scale=7,margin=4,width=(qr.modules.size+margin*2)*scale,pixels=new Uint8ClampedArray(width*width*4);pixels.fill(255);
+for(let y=0;y<qr.modules.size;y++)for(let x=0;x<qr.modules.size;x++)if(qr.modules.get(y,x))for(let dy=0;dy<scale;dy++)for(let dx=0;dx<scale;dx++){const p=(((y+margin)*scale+dy)*width+(x+margin)*scale+dx)*4;pixels[p]=pixels[p+1]=pixels[p+2]=0;}
+check(()=>assert.equal(jsQR(pixels,width,width).data,'flag{local_qr_works}'));
+check(()=>assert.equal(jsQR(new Uint8ClampedArray(20*20*4).fill(255),20,20),null));
+console.log(`Improvement algorithms passed: ${checks} assertions (hashes, ciphers, storage, logs, streams, DNS, images, QR).`);
+

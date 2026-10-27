@@ -1,0 +1,848 @@
+{
+  "checkedAt": "2026-10-27T01:04:20.381Z",
+  "note": "HTTP availability only. Does not verify site functionality, price, accounts, uploads, or downloadable programs. Bot protections may reject automated requests. Each row records its own check time; --changed rechecks only changed URLs.",
+  "results": [
+    {
+      "name": "Sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/sherlock-project/sherlock",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "theHarvester",
+      "url": "https://github.com/laramies/theHarvester",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/laramies/theHarvester",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "OWASP Amass",
+      "url": "https://github.com/owasp-amass/amass",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/owasp-amass/amass",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "crt.sh",
+      "url": "https://crt.sh/",
+      "status": 502,
+      "method": "HEAD",
+      "finalUrl": "https://crt.sh/",
+      "result": "HTTP 502; manual check needed",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Wayback Machine",
+      "url": "https://web.archive.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://web.archive.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "what3words",
+      "url": "https://what3words.com/",
+      "status": 403,
+      "method": "GET",
+      "finalUrl": "https://what3words.com/clip.apples.leap?redirect=true",
+      "result": "HTTP 403; manual check needed",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "GitHub Secrets",
+      "url": "https://github.com/neodyme-labs/github-secrets",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/neodyme-labs/github-secrets",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Subdomain Finder",
+      "url": "https://subdomainfinder.c99.nl/index.php",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://subdomainfinder.c99.nl/index.php",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Google Certificate Transparency",
+      "url": "https://transparencyreport.google.com/https/certificates",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://transparencyreport.google.com/https/certificates",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Skrapp LinkedIn Email Finder",
+      "url": "https://skrapp.io/tutorials/linkedin-email-finder",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://skrapp.io/tutorials/linkedin-email-finder",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Epieos",
+      "url": "https://epieos.com/",
+      "status": 403,
+      "method": "GET",
+      "finalUrl": "https://epieos.com/",
+      "result": "HTTP 403; manual check needed",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "md5decrypt",
+      "url": "https://md5decrypt.net/en/Sha256/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://md5decrypt.net/en/Sha256/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "CyberChef",
+      "url": "https://gchq.github.io/CyberChef/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://gchq.github.io/CyberChef/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Hashcat",
+      "url": "https://hashcat.net/hashcat/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://hashcat.net/hashcat/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "John the Ripper",
+      "url": "https://www.openwall.com/john/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.openwall.com/john/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "RsaCtfTool",
+      "url": "https://github.com/RsaCtfTool/RsaCtfTool",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/RsaCtfTool/RsaCtfTool",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "xortool",
+      "url": "https://github.com/hellman/xortool",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/hellman/xortool",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "SageMath",
+      "url": "https://www.sagemath.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.sagemath.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "TunnelsUP Hash Analyzer",
+      "url": "https://www.tunnelsup.com/hash-analyzer/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.tunnelsup.com/hash-analyzer/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "binsec HashLookup",
+      "url": "https://binsec.tools/lookup/hash/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://binsec.tools/lookup/hash/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "CrackStation",
+      "url": "https://crackstation.net/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://crackstation.net/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Cryptii",
+      "url": "https://cryptii.com/pipes/a1z26-cipher/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://cryptii.com/pipes/a1z26-cipher/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "RapidTables Converter",
+      "url": "https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "XOR Calculator",
+      "url": "http://xor.pw/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://xor.pw/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "ZIP Password Recovery",
+      "url": "https://passwordrecovery.io/zip-file-password-removal/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://passwordrecovery.io/zip-file-password-removal/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "ASCII Table",
+      "url": "http://www.asciitable.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.asciitable.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "dCode",
+      "url": "https://www.dcode.fr",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.dcode.fr/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "quipqiup",
+      "url": "https://quipqiup.com/",
+      "result": "Not verified",
+      "error": "UND_ERR_SOCKET",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Defuse Big Number Calculator",
+      "url": "https://defuse.ca/big-number-calculator.htm",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://defuse.ca/big-number-calculator.htm",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "CrypTool RSA Calculator",
+      "url": "https://www.cryptool.org/en/cto/rsa-step-by-step/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.cryptool.org/en/cto/rsa-step-by-step/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:04:20.381Z"
+    },
+    {
+      "name": "Modular Inverse",
+      "url": "https://www.dcode.fr/modular-inverse",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.dcode.fr/modular-inverse",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "FactorDB",
+      "url": "http://factordb.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "http://factordb.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Guballa Vigenere Solver",
+      "url": "https://www.guballa.de/vigenere-solver",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.guballa.de/vigenere-solver",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Guballa Substitution Solver",
+      "url": "https://www.guballa.de/substitution-solver",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.guballa.de/substitution-solver",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "SageCell",
+      "url": "https://sagecell.sagemath.org/",
+      "status": 200,
+      "method": "GET",
+      "finalUrl": "https://sagecell.sagemath.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Crunch",
+      "url": "https://tools.kali.org/password-attacks/crunch",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.kali.org/tools/crunch/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Online Hash Crack",
+      "url": "https://www.onlinehashcrack.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.onlinehashcrack.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Hash Identifier",
+      "url": "https://tools.kali.org/password-attacks/hash-identifier",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.kali.org/tools/hash-identifier/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Morse Code Translator",
+      "url": "https://morsecode.world/international/translator.html",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://morsecode.world/international/translator.html",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "gmpy2",
+      "url": "https://gmpy2.readthedocs.io/en/stable/overview.html",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://gmpy2.readthedocs.io/en/stable/overview.html",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:04:20.211Z"
+    },
+    {
+      "name": "Quadibloc Ciphers",
+      "url": "http://www.quadibloc.com/crypto/intro.htm",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "http://www.quadibloc.com/crypto/intro.htm",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Symbolic Ciphers",
+      "url": "https://www.dcode.fr/symbols-ciphers",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.dcode.fr/symbols-ciphers",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "ExifTool",
+      "url": "https://exiftool.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://exiftool.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Autopsy",
+      "url": "https://www.autopsy.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.autopsy.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Binwalk",
+      "url": "https://github.com/ReFirmLabs/binwalk",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/ReFirmLabs/binwalk",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Volatility 3",
+      "url": "https://github.com/volatilityfoundation/volatility3",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/volatilityfoundation/volatility3",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "YARA-X",
+      "url": "https://virustotal.github.io/yara-x/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://virustotal.github.io/yara-x/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "regex101",
+      "url": "https://regex101.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://regex101.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "ripgrep",
+      "url": "https://github.com/BurntSushi/ripgrep",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/BurntSushi/ripgrep",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "JADX",
+      "url": "https://github.com/skylot/jadx",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/skylot/jadx",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "CTF Katana",
+      "url": "https://github.com/JohnHammond/ctf-katana",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/JohnHammond/ctf-katana",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "HexEd.it",
+      "url": "https://hexed.it/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://hexed.it/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Debuggex",
+      "url": "https://www.debuggex.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.debuggex.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Aperi'Solve",
+      "url": "https://aperisolve.fr/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://aperisolve.fr/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "StegOnline",
+      "url": "https://stegonline.georgeom.net",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://georgeom.net/StegOnline/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Stegsolve",
+      "url": "https://github.com/eugenekolo/sec-tools/tree/master/stego/stegsolve/stegsolve",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/eugenekolo/sec-tools/tree/master/stego/stegsolve/stegsolve",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Steganography Online",
+      "url": "https://stylesuxx.github.io/steganography/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://stylesuxx.github.io/steganography/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Futureboy Steganography",
+      "url": "https://futureboy.us/stegano/decinput.html",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://futureboy.us/stegano/decinput.html",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Image Color Picker",
+      "url": "https://imagecolorpicker.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://imagecolorpicker.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Stegseek",
+      "url": "https://github.com/RickdeJager/stegseek",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/RickdeJager/stegseek",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "steghide Manual",
+      "url": "http://steghide.sourceforge.net/documentation/manpage.php",
+      "status": 500,
+      "method": "HEAD",
+      "finalUrl": "https://steghide.sourceforge.net/documentation/manpage.php",
+      "result": "HTTP 500; manual check needed",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "zsteg",
+      "url": "https://github.com/zed-0xff/zsteg",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/zed-0xff/zsteg",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Syscall Reference",
+      "url": "https://syscalls.w3challs.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://syscalls.w3challs.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Online Assembler / Disassembler",
+      "url": "https://defuse.ca/online-x86-assembler.htm#disassembly",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://defuse.ca/online-x86-assembler.htm",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Binary Ninja Cloud",
+      "url": "https://cloud.binary.ninja/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://cloud.binary.ninja/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Dogbolt",
+      "url": "https://dogbolt.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://dogbolt.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Forensically",
+      "url": "https://29a.ch/photo-forensics/#forensic-magnifier",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://29a.ch/photo-forensics/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Foremost",
+      "url": "https://tools.kali.org/forensics/foremost",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.kali.org/tools/foremost/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Java Decompilers",
+      "url": "http://www.javadecompilers.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.javadecompilers.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "MobSF",
+      "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Burp Suite Community",
+      "url": "https://portswigger.net/burp/downloads",
+      "status": 404,
+      "method": "HEAD",
+      "finalUrl": "https://portswigger.net/burp/downloads",
+      "result": "HTTP 404; manual check needed",
+      "checkedAt": "2026-10-27T01:04:20.252Z"
+    },
+    {
+      "name": "OWASP ZAP",
+      "url": "https://www.zaproxy.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.zaproxy.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "mitmproxy",
+      "url": "https://mitmproxy.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.mitmproxy.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "ffuf",
+      "url": "https://github.com/ffuf/ffuf",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/ffuf/ffuf",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "dirsearch",
+      "url": "https://github.com/maurosoria/dirsearch",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/maurosoria/dirsearch",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "sqlmap",
+      "url": "https://sqlmap.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://sqlmap.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Save All Resources",
+      "url": "https://chrome.google.com/webstore/detail/save-all-resources/abpdnfjocnmdomablahdcfnoggeeiedb?hl=en-US",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://chromewebstore.google.com/detail/save-all-resources/abpdnfjocnmdomablahdcfnoggeeiedb?hl=en-US",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "CSP Evaluator",
+      "url": "https://csp-evaluator.withgoogle.com/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://csp-evaluator.withgoogle.com/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Traversal Archives",
+      "url": "https://github.com/jwilk/traversal-archives",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/jwilk/traversal-archives",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "CSP Cheatsheet",
+      "url": "https://six2dez.gitbook.io/pentest-book/enumeration/web/csp",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.pentest-book.com/enumeration/web/csp",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "JSONBee Endpoints",
+      "url": "https://github.com/zigoo0/JSONBee/blob/master/jsonp.txt",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/zigoo0/JSONBee/blob/master/jsonp.txt",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "PayloadsAllTheThings",
+      "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Wireshark",
+      "url": "https://www.wireshark.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.wireshark.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "TShark",
+      "url": "https://www.wireshark.org/docs/man-pages/tshark.html",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.wireshark.org/docs/man-pages/tshark.html",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Nmap",
+      "url": "https://nmap.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://nmap.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Scapy",
+      "url": "https://scapy.net/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://scapy.net/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Aircrack-ng",
+      "url": "https://www.aircrack-ng.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.aircrack-ng.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Kismet",
+      "url": "https://www.kismetwireless.net/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.kismetwireless.net/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "Text to PCAP",
+      "url": "https://hex2pcap.voipanalyzertool.com/",
+      "result": "Not verified",
+      "error": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "QR Code Decoder",
+      "url": "https://www.qr-codes.com/decoder",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://www.qr-codes.com/decoder",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "picoCTF",
+      "url": "https://picoctf.org/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://picoctf.org/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "capturetheflag",
+      "url": "https://capturetheflag.it/risorse/come-imparo",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://capturetheflag.it/risorse/come-imparo",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "OverTheWire",
+      "url": "https://overthewire.org/wargames/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://overthewire.org/wargames/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    },
+    {
+      "name": "pwnable.kr",
+      "url": "http://pwnable.kr/",
+      "status": 200,
+      "method": "HEAD",
+      "finalUrl": "https://pwnable.kr/",
+      "result": "Responded successfully",
+      "checkedAt": "2026-10-27T01:01:30.083Z"
+    }
+  ]
+}

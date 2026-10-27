@@ -1,0 +1,5 @@
+{
+  "name": "letswin-ctf", "version": "2.0.0", "private": true,
+  "scripts": {"build": "node build.cjs", "test": "node tests/run.cjs"},
+  "devDependencies": {"crypto-js": "4.2.0", "jsqr": "1.4.0", "jsdom": "26.1.0", "qrcode": "1.5.4"}
+}
